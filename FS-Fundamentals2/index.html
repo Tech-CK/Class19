@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="tasks.js"></script>
+    <title>JavaScript Variables</title>
+    <style>
+      .list {
+        font-size: 22px;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <img src="./assets/cat.gif" alt="javaScriptVariables" />
+    <h2 style="color: crimson">To open the developer tool (console):</h2>
+    <div>
+      <ul class="list">
+        <li>right click on your mouse,and choose inspect.</li>
+        <li>
+          After solving each question make sure to save your work in your text
+          editor.
+        </li>
+        <li>
+          And to see the results in console always remember to refresh the page.
+        </li>
+        <li>Also remember to <b>Have Fun ...</b></li>
+      </ul>
+
+     
+      <!-- In the next 5 small tasks type the correct answer.
+       Replace null with your answer in all tasks. -->
+
+    
+      <h1>JS - Functions</h1>
+       <br/>
+
+      ---------------------Part1:Basic---------------------
+      <br/><br/>
+      ---------------Q1---------------
+      <br/>
+      <p>Task 1: What will the value of `ln` be?</p>
+      
+      <p id="answer1"></p>
+
+      <script>
+      let text = "thisisaRandomSentence";
+      let length = text.length;
+
+      document.getElementById("answer1").innerHTML = length;
+      </script>
+
+    
+  
+
+    
+    <p>Task 2: What will the value of `position` be?</p>
+    <p id="d"></p>
+    <script>
+      let stringt= "Please do all of your assignments";
+      let result =string.indexOf("your");
+      
+      document.getElementById("d").innerHTML = result;
+    </script>
+
+    
+   
+    <p>Task 3: What will the value of `pick` will be?</p>
+
+    <p id="answer3"></p>
+
+    <script>
+    let color = "Red, Blue, Green, Yellow";
+    let pic= color.slice(5, 9);
+
+    document.getElementById("answer3").innerHTML = pic;
+    </script>
+
+    <p>Task 4: What should be the values of `k` and `l`
+       in order for the `result` to be `Yellow`?</p>
+
+
+       ---------------Q1---------------
+
+       <br/>
+
+      <p id="demo">Task 5. Consider you have the following variables.<br/>
+      Write an if-else statement that will take those numbers <br/>
+      and i will console.log the greater number.</p>
+
+      <script>
+
+      let c = 3;
+      let d = 5;
+
+      if ( c < d) {
+        document.getElementById("demo").innerHTML = " d is greater than c";
+      }
+      </script>
+
+       <br/>
+      ---------------Q2-----------------------------------
+      <br/>
+      <p id="html"> Escaping characters:</p>
+     <script>
+      document.getElementById("html").innerHTML = "Up up\\n\\down down";
+     </script>
+     <br/><br/>
+
+      ---------------Q5.1:----------------
+      <br/>
+     <p>if it is raining
+      you should wear a raincoat</p>
+     <p id="space"></p>
+     
+    <script>
+       document.getElementById("space").innerHTML="if it is raining"+"<br> "+"you should wear a raincoat</p>";
+     
+       </script>
+
+        ---------------Q5.2:----------------
+      <p>if your score plus, added to my score, is greater than 90
+      we should celebrate</p>
+
+      
+      <p id="space1"></p>
+     
+    <script>
+       document.getElementById("space1").innerHTML="if your score plus, added to my score, is greater than 90"+"<br> "+"we should celebrate</p>";
+
+    </script>
+     --------------- Q5.3:----------------
+   <br/><br/>
+      Given that let password = "HBffN90oDVDFRET";
+      <br/><br/>
+
+    <!--   if  the password length is greater than 9 and less than 20
+      your password is strong enough.
+      otherwise. Please write a strong valid password.
+ -->
+      
+
+      <script>
+        function verifyPassword() {
+          var pw = document.getElementById("pswd").value;
+          
+          if(pw == "") {
+             document.getElementById("message").innerHTML = "**Fill the password please!";
+             return false;
+          }
+         
+         
+          if(pw.length <9) {
+             document.getElementById("message").innerHTML = "**Password length must be atleast 9 characters";
+             return false;
+          }
+        
+        
+          if(pw.length > 20) {
+             document.getElementById("message").innerHTML = "**Password length must not exceed 20 characters";
+             return false;
+          } else {
+             alert("Password is correct");
+          }
+        }
+        </script>
+        
+      
+        <script>
+          function verifyPassword() {
+            var pw = document.getElementById("pswd").value;
+          
+            if(pw == "20") {
+               document.getElementById("message").innerHTML = "**Fill the password please!";
+               return false;
+            }
+           
+      
+            if(pw.length <9) {
+               document.getElementById("message").innerHTML = "**Password length must be atleast 9 characters";
+               return false;
+            }
+          
+        
+            if(pw.length > 15) {
+               document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+               return false;
+            } else {
+               alert("Password is correct");
+            }
+          }
+          </script>
+          
+          
+      
+         
+          
+          <form onsubmit ="return verifyPassword()">
+          
+          <td> Enter Password </td>
+          <input type = "password" id = "pswd" value = ""> 
+          <span id = "message" style="color:red"> </span> <br><br>
+          
+          <!-- Click to verify valid password -->
+          <input type = "submit" value = "Submit">
+          
+          <!-- Click to reset fields -->
+          <button type = "reset" value = "Reset" >Reset</button>
+          </form>
+        
+
+           ---------------Q5.4:----------------
+
+           <p>Given that you have the following Grades
+          
+          let mathGrade = 90;<br/>
+          let codingGrade = 97;<br/>
+          let scienceGrade = 80;<br/>
+          let artGrade = 78;<br/>
+          let geographyGrade = 70;<br/>
+          <br/><br/>
+          
+          1.  find the average<br/>
+          2.  if your average is greater than 90, print on console "your average is excellent".<br/>
+          3.  if your average is less than 90 and greater than 80, print "your average is veryGood"<br/>
+          4.  if your average is greater than 70 and less than 80, print "your average is good"<br/>
+          5.  Otherwise print "You need to work harder"
+        
+        </p>
+         <p> Your code here </p>
+         <p id ="grades"></p>
+         <script>
+            let m = 75; 
+              
+              if (m <= 100 && m >= 90){
+                    document.getElementById("grades").innerHTML="Your average is excellent";
+              }
+              else if(m <= 89 && m >= 80){
+                document.getElementById("grades").innerHTML="Your average is veryGood";
+              }
+              
+              else if(m <= 79 && m >= 70){
+                document.getElementById("grades").innerHTML="Your average is good";
+              }
+              
+              else if(m <= 69 && m >= 60){
+                     document.getElementById("grades").innerHTML="You need to work harder";
+              }
+              
+              else if(m < 60 ){
+                document.getElementById("grades").innerHTML="You need to work harder.You failed";
+              }
+              
+              </script>
+
+
+             ---------------Q6---------------
+              
+             <p> Using ternary operator<br/>
+              1.  declare two number variables with  any values.<br/>
+              2.  find the summationis greater than 10, print "greater t
+              3.  if the sum han 10"<br/>
+              4.  otherwise print "less than 10"<br/>
+              </p>
+              
+              <p>Your code here</p>
+              <p id="Greater"></p>
+             
+              <br/> 
+              <script>
+                let X = 1;
+                let Y = 7;
+                
+                
+                if( X>10){
+                  document.getElementById("Greater").innerHTML=X+Y +"" +" is  greater than 10";
+                }else{
+                  document.getElementById("Greater").innerHTML=X+Y +" " +" is less than 10";
+                }
+            </script>
+              
+  </div>
+    
+</body>
+</html>
